@@ -6,7 +6,10 @@ function Person(props){
     return(
         <div className="display">
             <header>
-            <div className="home"><h2>Home</h2></div>
+            <div className="home">
+                <button className="homeButt"><b>Home</b>
+                </button>
+            </div>
         </header>
           <main>
             

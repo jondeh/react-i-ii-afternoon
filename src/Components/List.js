@@ -39,12 +39,6 @@ class List extends Component {
                     updateNextFn={this.updateNext}
                     updatePrevFn={this.updatePrev}
                     />
-                {/* <button
-                    className="previous"
-                    onClick={() => this.updatePrev(this.state.pageNumber)}>PREVIOUS</button>
-                <button 
-                    className="next"
-                    onClick={() => this.updateNext(this.state.pageNumber, this.state.data)}>NEXT</button> */}
             </div>
         )
     }
