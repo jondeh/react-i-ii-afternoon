@@ -1,0 +1,186 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+header {
+  height: 12%;
+  width: 100%;
+  background-color: rgb(52,165,218);
+  position: relative;
+  padding-left: 3%;
+  display: flex;
+  align-items: center;
+}
+
+.home {
+  position: relative;
+  top: 30%;
+  left: 5%;
+}
+
+main {
+  height: 88%;
+  width: 100%;
+  background-color: rgb(33,39,43);
+  position: relative;
+  padding-right: 5%;
+  padding-bottom: 2%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.body {
+  height: 71%;
+  width: 90%;
+  background-color: white;
+}
+
+.bodyHead {
+  height: 25%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  
+}
+
+.name {
+  height: 40%;
+  width: 30%;
+  margin-left: 5%;
+  text-align: center;
+  border-bottom: 2px solid rgb(52,165,218);
+
+  
+}
+
+.page {
+  height: 48%;
+  width: 10%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: black;
+  text-align: center;
+  font-size: 40px;
+}
+
+.bodyMain {
+  height: 62%;
+  width: 100%;
+  /* padding-bottom: 1%; */
+}
+
+.list-1 {
+  height: 42%;
+  width: 50%;
+  padding-left: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.inLine {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.list-2 {
+  height: 44%;
+  width: 50%;
+  padding-left: 5%;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.movies {
+  padding-left: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.bodyFoot {
+  height: 13%;
+  width: 100%;
+  background-color: rgb(33,39,43);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2px;
+} 
+
+
+
+.nav {
+  height: 100%;
+  width: 33%;
+  display: flex;
+  padding-left: 1%;
+  padding-right: 1%;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2%;
+  
+}
+
+.navButts {
+  border: 0px;
+  border-radius: 20px;
+  height: 75%;
+  width: 26%;
+  background-color: rgb(52,165,218);
+  color: white;
+  letter-spacing: 1px;
+}
+
+.delete {
+  border: 0px;
+  border-radius: 20px;
+  height: 75%;
+  width: 30%;
+  background-color: rgb(52,165,218);
+  color: white;
+}
+
+.previous {
+  height: 100%;
+  width: 10%;
+  font-size: 25px;
+  color: white;
+  background-color: rgb(33,39,43);
+  border: 0px;
+}
+
+.next {
+  height: 100%;
+  width: 7%;
+  font-size: 25px;
+  color: white;
+  background-color: rgb(33,39,43);
+  border: 0px;
+}
