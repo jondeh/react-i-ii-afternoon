@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import data from '../data'
 import Person from './Person'
 import '../App.css'
+import DelPage from './DelPage'
 
 class List extends Component {
     constructor(){
@@ -12,6 +13,8 @@ class List extends Component {
         }
         this.updateNext = this.updateNext.bind(this)
         this.updatePrev = this.updatePrev.bind(this)
+        this.handleHome = this.handleHome.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     updateNext(num, arr){
@@ -25,11 +28,37 @@ class List extends Component {
             this.setState({pageNumber: num-1})
         }
     }
+
+    handleHome(){
+        this.setState({
+            pageNumber: 1})
+    }
+
+    handleDelete(num, arr){
+        let newArr = arr;
+        if(arr.length < 2){
+            return alert('Oops! You deleted everything! Time for a spankin!')
+        }
+        if(arr.length === num){
+            newArr.splice(num-1, 1);
+            this.setState({
+                data: newArr,
+                pageNumber: num-1
+            })  
+        } else {
+        newArr.splice(num-1, 1);
+        this.setState({
+            data: newArr,
+            pageNumber: num
+        })
+        }
+    }
     
+    handleNew(){
+
+    }
     
     render(){
-        console.log(this.state.pageNumber)
-
         return(
             <div className="List">
                 <Person 
@@ -38,6 +67,10 @@ class List extends Component {
                     display={this.state.display}
                     updateNextFn={this.updateNext}
                     updatePrevFn={this.updatePrev}
+                    handleHomeFn={this.handleHome}
+                    handleEditFn={this.handleEdit}
+                    handleDeleteFn={this.handleDelete}
+                    handleNewFn={this.handleNew}
                     />
             </div>
         )

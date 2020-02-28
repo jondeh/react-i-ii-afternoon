@@ -1,0 +1,15 @@
+.nothing-left {
+    height: 100vh;
+    width: 100%;
+    background-color: midnightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-box {
+    height: 10%;
+    width: 10%;
+    color: black;
+    font-size: 28px;
+}

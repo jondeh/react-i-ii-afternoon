@@ -1,13 +1,15 @@
 import React from 'react'
 
 function Person(props){
-    const {arrayList, pageNumber, updateNextFn, updatePrevFn} = props
+    const {arrayList, pageNumber, updateNextFn, updatePrevFn, handleHomeFn, handleEditFn, handleDeleteFn, handleNewFn} = props
 
     return(
         <div className="display">
             <header>
             <div className="home">
-                <button className="homeButt"><b>Home</b>
+                <button 
+                    className="homeButt"
+                    onClick={handleHomeFn}><b>Home</b>
                 </button>
             </div>
         </header>
@@ -21,7 +23,7 @@ function Person(props){
                       {arrayList[pageNumber-1].name.last}
                     </h1>
                   </div>
-                  <div className="page"><b>{pageNumber}/25</b></div>
+                  <div className="page"><b>{pageNumber}/{arrayList.length}</b></div>
               </div>
               
               <div className="bodyMain">
@@ -71,9 +73,21 @@ function Person(props){
                     onClick={() => updatePrevFn(pageNumber)}> <b>&lt; PREVIOUS </b>
                 </button>
                 <div className="nav">
-                  <button className="navButts"><b>EDIT</b></button>
-                  <button className="delete"><b>DELETE</b></button>
-                  <button className="navButts"><b>NEW</b></button>
+
+                  <button 
+                  className="navButts"
+                  onClick={handleEditFn}><b>EDIT</b>
+                  </button>
+                  
+                  <button 
+                    className="delete"
+                    onClick={() => handleDeleteFn(pageNumber, arrayList)}><b>DELETE</b>
+                  </button>
+                  
+                  <button 
+                    className="navButts"><b>NEW</b>
+                  </button>
+
                 </div>
                 <button 
                     className="next"
